@@ -1,0 +1,19 @@
+---
+title: "pander test"
+author: "Nishant Sahni"
+date: "July 6, 2015"
+output: html_document
+---
+```{r}
+transition_p$in_er.x <- relevel(as.factor(transition_p$in_er.x),"TRUE")
+transition_p$in_er.y <- relevel(as.factor(transition_p$in_er.y),"TRUE")
+
+model <- glm(data=transition_p, inhospital_death.x~in_er.x+in_er.y+age.x+Charlson,family=binomial)
+table2 <- table %>% mutate(Odds=round(exp(estimate),2)) %>% mutate(Lower_bounds=round(exp(estimate-std.error),2),.) %>% mutate(Upper_bounds=round(exp(estimate+std.error),2),.) 
+table2$term[[3]] <- c("IV fluids administered in the ER")
+table2$term[[4]] <- c("Age")
+table2$term[[2]] <- c("Antibiotics administered in the ER")
+View(table2)
+Pandoc
+```
+

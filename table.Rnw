@@ -1,0 +1,22 @@
+\documentclass{article}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+% latex table generated in R 3.2.0 by xtable 1.7-4 package
+% Mon Jul  6 18:31:38 2015
+\begin{table}[ht]
+\centering
+\begin{tabular}{rlrrrrrrr}
+  \hline
+ & term & estimate & std.error & statistic & p.value & Odds & Lower\_bounds & Upper\_bounds \\ 
+  \hline
+1 & (Intercept) & -3.05 & 0.49 & -6.17 & 0.00 & 0.05 & 0.03 & 0.08 \\ 
+  2 & Antibiotics administered in the ER & 0.60 & 0.25 & 2.37 & 0.02 & 1.83 & 1.42 & 2.36 \\ 
+  3 & IV fluids administered in the ER & 0.57 & 0.28 & 2.07 & 0.04 & 1.77 & 1.34 & 2.33 \\ 
+  4 & Age & 0.01 & 0.01 & 1.90 & 0.06 & 1.01 & 1.01 & 1.02 \\ 
+  5 & Charlson & 0.31 & 0.17 & 1.86 & 0.06 & 1.36 & 1.15 & 1.61 \\ 
+   \hline
+\end{tabular}
+\end{table}
+
+\end{document}
